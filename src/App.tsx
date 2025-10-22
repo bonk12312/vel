@@ -356,9 +356,6 @@ function App() {
     return () => clearInterval(statsInterval);
   }, []);
 
-  useEffect(() => {
-    consoleEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [logs]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
