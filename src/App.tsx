@@ -599,7 +599,7 @@ function App() {
           </button>
 
           <a
-            href="https://twitter.com"
+            href="https://x.com/velalgorithm"
             target="_blank"
             rel="noopener noreferrer"
             className="group w-full flex items-center gap-3 px-4 py-3 border border-[#444444] hover:border-[#8888ff] hover:bg-[#8888ff]/10 hover:text-[#8888ff] transition-all duration-300 hover:glow-blue relative overflow-hidden"
