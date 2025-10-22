@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-shadow-red {
+    text-shadow: 0 0 10px rgba(255, 45, 45, 0.5);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 10px rgba(255, 45, 45, 0.3);
+  }
+
+  .glow-red-strong {
+    box-shadow: 0 0 20px rgba(255, 45, 45, 0.6), 0 0 40px rgba(255, 45, 45, 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5), 0 0 30px rgba(0, 255, 136, 0.2);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.5), 0 0 30px rgba(255, 170, 0, 0.2);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 15px rgba(136, 136, 255, 0.5), 0 0 30px rgba(136, 136, 255, 0.2);
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(255, 45, 45, 0.3), 0 0 10px rgba(255, 45, 45, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 45, 45, 0.6), 0 0 40px rgba(255, 45, 45, 0.4), 0 0 60px rgba(255, 45, 45, 0.2);
+    }
+  }
+
+  .animate-flicker {
+    animation: flicker 3s ease-in-out infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    41%, 43%, 45% {
+      opacity: 0.7;
+    }
+    42%, 44% {
+      opacity: 1;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #ff2d2d;
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #cc2424;
+  }
+}
